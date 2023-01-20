@@ -18,7 +18,8 @@ public class CurrencyConversionController {
 
 	@GetMapping("/currency-converter/currencyfeed/from/{from}/to/{to}/amount/{amount}")
 	public CurrencyConversionResponse getCurrencyConverionData(@PathVariable String from, @PathVariable String to,
-			@PathVariable BigDecimal amount) {
+			@PathVariable BigDecimal amount) 
+	{		
 		return currencyConversionService.convertCurrency(from, to, amount);
 	}
 }
